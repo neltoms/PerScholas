@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+
+
+<form>
+	<label for="firstName">First Name:</label>
+	<input id="firstName" placeholder="John" type="text" name="firstName" required>
+	<label for="lastName">Last Name:</label>
+	<input id="lastName" placeholder="Smith" type="text" name="lastName" required>
+<div>
+	<label for="man">Male</label>
+	<input id="man" type="radio" name="gender" value="male" required>
+	<label for="woman">Female</label>
+	<input id="woman" type="radio" name="gender" value="female" required>
+	<label for="other">Other</label>
+	<input id="other" type="radio" name="gender" value="other" required>
+</div>
+
+<div>
+	<label>
+	Email:
+		<input placeholder="your email" type="email" name="email" required>
+	</label>
+
+	<label>
+	Password:
+		<input type="password" name="password" pattern=".{5,10}" title="Password must be between 5 and 10 characters" required>
+	</label>
+</div>
+
+<div>
+	<label>Birthday</label>
+        <select name="month">
+          <option selected disabled>Month</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+
+        <select name="day">
+        	<option>Day</option>
+        	<option>1</option>
+        	<option>2</option>
+        	<option>3</option>
+        	<option>4</option>
+        	<option>5</option>
+        </select>
+
+        <select name="year">
+        	<option>year</option>
+        	<option>2002</option>
+        	<option>2001</option>
+        	<option>2000</option>
+        	<option>1999</option>
+        	<option>1998</option>
+        </select>
+</div>
+
+<div>
+	I agree to the terms and conditions 
+	<input type="checkbox" name="" required>
+</div>
+
+<input type="submit">
+
+</form>
+	
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+h1 {
+	color: #D2691E;
+	/*border-color: purple
+	border-width; 5px;
+	border-style: solid;*/
+	border: 2px solid rgb(200,56,34);
+}
+
+li {
+	color: #4B0082;
+}
+
+h4 {
+	color: #001493;
+	background: rgb(200,56,34);
+}
+
+body {
+	background: pink;
+
+	/*background: url(https://images.homedepot-static.com/productImages/3c9e8c98-c56d-4b64-be76-f4cf877de597/svn/beige-designer-stencils-stencils-fs024-64_1000.jpg);*/
+
+}
