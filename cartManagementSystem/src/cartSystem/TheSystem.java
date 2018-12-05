@@ -1,4 +1,4 @@
-package cartSystemExample;
+package cartSystem;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,11 +26,6 @@ public class TheSystem extends Item {
         	String line = null;
         	while ((line = br.readLine()) != null) {
         		System.out.println(line);
-//        		if (line.split(" ").length > 1) {
-//        			
-//        		} continue;
-//        		Item item = line;
-//        		itemCollection.put(line, );
         	} 
         } else {
         	

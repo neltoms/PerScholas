@@ -1,4 +1,4 @@
-package cartSystemExample;
+package cartSystem;
 
 import java.io.IOException;
 import java.util.HashMap;

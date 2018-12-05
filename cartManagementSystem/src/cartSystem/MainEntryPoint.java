@@ -1,4 +1,4 @@
-package cartSystemExample;
+package cartSystem;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -82,6 +82,9 @@ public class MainEntryPoint {
 			}
 		}
 		reader.close();
+		
+// debugging code
+		
 //		Item item = new Item();
 //		Item item2 = new Item();
 //		item.setItemName("pizza");
