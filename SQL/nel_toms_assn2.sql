@@ -1,4 +1,4 @@
-
+--Nel Toms
 
 --1.
 select lo.name as name, count(distinct sl.staid) as sta
@@ -120,4 +120,36 @@ on location.locationid=stationbylocation.locid
 where tminmax.year>=2000
 group by name, station.maxdate
 having year(station.maxdate) < max(tminmax.year);
+
+
+--6A.
+select round(avg(tobs),3) as T_mean, round((tmax-tmin),3) as Amplitude
+from tminmax
+where stationid=1115;
+
+select round(avg(tobs),3) as T_mean, round((tmax-tmin),3) as Amplitude, year 
+from tminmax 
+where stationid=1115 and tobs not in (999)
+group by Amplitude 
+order by year desc;
+
+--6B1.
+select round(avg(tobs),3), year 
+from tminmax 
+where stationid=1115 and year>=2008 and tobs not in (999) 
+group by tmax, tmin, year 
+order by year desc;
+
+--6B2.
+select round(avg(tobs),3) as tb, dayofyear, (select min(tobs) from tminmax
+	where stationid=1115 and year>=2008) as sub
+from tminmax 
+where stationid=1115 and year>=2008 and tobs not in (999) 
+group by sub 
+order by tb desc;
+
+
+
+
+
 
