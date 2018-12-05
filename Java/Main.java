@@ -1,4 +1,7 @@
 
+package savingsAccounts;
+
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,6 +22,7 @@ public class Main {
 		
 		BankAccount savAcct = new BankAccount(saveNum, initDep);
 		
+
 		// Enter interest rate
 		System.out.println("Enter the annual interest rate... ");
 		double rate = sc.nextDouble();

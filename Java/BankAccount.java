@@ -1,4 +1,5 @@
 
+package savingsAccounts;
 
 public class BankAccount {
 	
@@ -17,6 +18,7 @@ public class BankAccount {
 		this.account_number = account_number;
 		this.account_balance = account_balance;
 		this.initDep = account_balance;
+
 		System.out.println("You created the bank account " + this.account_number + 
 				" with $" + this.account_balance + ".") ;
 		
@@ -53,6 +55,11 @@ public class BankAccount {
 	
 	public int getWith() {
 		return totWith;
+
+	}
+	
+	public int getWith() {
+		return this.removeMoney;
 	}
 	
 	public int balance() {

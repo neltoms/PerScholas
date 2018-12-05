@@ -9,6 +9,8 @@ hdfs dfs -mkdir /user/maria_dev/patent_temp/
 -- move file from vm local file system to hdfs
 hdfs dfs -copyFromLocal apat63_99.txt /user/maria_dev/patent_temp
 
+
+-- A. Create an internal table for Patent data set.(Make sure not to include the header row)
 use uspto;
 
 drop table if exists patents; create table patents ( patent INT, gyear INT, gdate INT , appyear INT,
@@ -28,7 +30,9 @@ SET hive.exec.dynamic.partition=true;
 SET hive.exec.dynamic.partition.mode=nonstrict;
 
 
-
+-- B. Create an external table with dynamic partitioning for Patent data set so that it can be used 
+-- efficiently for queries which require looking into patents granted for given year.
+-- (Use data from previous table and partition by Grant Year).
 drop table if exists tmp_pat; create external table tmp_pat ( patent INT, gdate INT , appyear INT,
 country CHAR (2), postate CHAR (2), assignee INT, asscode INT, claims INT, nclass INT, cat INT, subcat INT,
 cmade INT, creceive INT, ratiocit INT, general INT, original INT, fwdaplag INT, bckgtlag INT, selfctub INT,
